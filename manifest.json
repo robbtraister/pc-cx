@@ -1,0 +1,22 @@
+{
+  "name": "P&C Paywall",
+  "version": "0.0.1",
+  "description": "Build an Extension!",
+  "manifest_version": 2,
+  "permissions": [
+    "http://*.postandcourier.com/*",
+    "https://*.postandcourier.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.postandcourier.com/*",
+        "https://*.postandcourier.com/*"
+      ],
+      "js": [
+        "js/liberate.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
